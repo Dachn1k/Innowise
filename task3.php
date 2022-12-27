@@ -1,34 +1,17 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
 <?php
-function foo(int $input)
+function foo(int $input):int
 {
-    $output = 0;
-    while ($input > 0 || $output > 9){
-        if($input == 0) {
-            $input = $output;
-            $output = 0;
-        }
-        $output += $input % 10;
-        $input = (int)$input / 10;
-
+    $array = array();
+    for ($i=strlen($input); $i >= 1; $i--) { 
+        $input = array_sum((str_split($input)));
+        array_push($array, $input);
+        
     }
-    return $output;
-
+    print_r($array);
+    return $input;
 }
 
-echo foo(9999);
+echo foo(5786940);
 ?>
-
-</body>
-</html>
 
 
