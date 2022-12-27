@@ -1,19 +1,10 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+
 <?php
 
 // Create a simple 'birthday countdown' script, the script counts the number of days left until the person’s birthday.
 // Your script should determine the number of days based on the current date.
 
-function countdown($birthday)
+function countdown(string $birthday):int
 {
     define('TIME', 86400);
     $date = date('d-m-Y'); // Дата на данный момент времени
@@ -31,8 +22,7 @@ function countdown($birthday)
 
 echo countdown("1-1-2003");
 ?>
-</body>
-</html>
+
 
 
 
