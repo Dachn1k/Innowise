@@ -1,22 +1,18 @@
 
 <?php
-function foo(int $input):int
+function foo(int $input): int
 {
-    $output = 0;
-    while ($input > 0 || $output > 9) {
-        if($input == 0) {
-            $input = $output;
-            $output = 0;
-        }
-        $output += $input % 10;
-        $input = (int)$input / 10;
+    $process = [];
+    for ($i = strlen($input); $i >= 1; $i--) {
+        $input = array_sum(str_split($input));
+        $process[]= $input;
 
     }
-    return $output;
-
+    print_r($process);
+    return $input;
 }
 
-echo foo(9999);
+echo foo(5786940);
 ?>
 
 

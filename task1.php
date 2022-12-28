@@ -4,40 +4,45 @@
 // using a if conditions, switch and ternary operator.
 function foo1(int $number):string
 {
+    $responseText = "";
     if ($number > 30) {
-        return "More than 30";
+        $responseText = "More than 30";
     }
     if ($number > 20 && $number <= 30) {
-        return "More than 20";
+        $responseText = "More than 20";
     }
     if ($number > 10 && $number <= 20) {
-        return "More than 10";
+        $responseText = "More than 10";
     }
     if ($number <= 10) {
-        return "Equal or less than 10";
+        $responseText = "Equal or less than 10";
     }
 
-    return $number;
+    return $responseText;
 }
 
 echo foo1(31);
 function foo2(int $number):string
 {
+    $responseText = "";
     switch (true) {
         case $number > 30:
-            return "More than 30";
+            $responseText = "More than 30";
+            break;
         case $number > 20 && $number <= 30:
-            return "More than 20";
+            $responseText = "More than 20";
+            break;
         case $number > 10 && $number <= 20:
-            return "More than 10";
-        case $number <= 10:
-            return "Equal or less than 10";
+            $responseText = "More than 10";
+            break;
+        default:
+            $responseText = "Equal or less than 10";
     }
 
-    return $number;
+    return $responseText;
 }
 
-echo foo2(5);
+echo foo2(11);
 
 function foo3(int $number) :string
 {
