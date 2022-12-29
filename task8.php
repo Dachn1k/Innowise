@@ -45,7 +45,7 @@ class Matrix
                 }
             }
             $this->arr = $matrix3;
-        } else echo "Умножение на матрицу не получится"; 
+        } else {echo "Умножение на матрицу не получится";} 
     }
 
     public function show(): void
@@ -64,6 +64,7 @@ class Matrix
             echo '</tr>';
         }
         $result .= '</table>';
+        
         return $result;
     }
 }
