@@ -1,9 +1,10 @@
 <?php
 $string = "              The quick-brown_fox jumps over the_lazy-dog       ";
-function foo(string $string):string{
-    $searchItems = [" ", "-", "_"];
-    trim($string);
+function stringTransform(string $string):string
+{
+    $separators = [" ", "-", "_"];
     $letterUpString = ucwords($string, " _-");
-    return  str_replace( $searchItems, "", $letterUpString);
+
+    return  str_replace( $separators, "", $letterUpString);
 }
-echo foo($string);
+echo stringTransform($string);
