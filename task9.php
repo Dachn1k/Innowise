@@ -11,7 +11,7 @@ class Student
         $this->averageMark = $averageMark;
     }
 
-    public function getScholarship(): void
+    public function getScholarship(): string
     {
         $amount = '';
         if ($this->averageMark == 5) {
@@ -19,20 +19,20 @@ class Student
         } else {
             $amount = '80 USD';
         }
-        echo $amount;
+        return $amount;
     }
 }
 
 class Aspirant extends Student
 {
-    public function getScholarship(): void
+    public function getScholarship(): string
     {
         if ($this->averageMark == 5) {
             $amount = '200 USD';
         } else {
             $amount = '180 USD';
         }
-        echo $amount;
+        return $amount;
     }
 }
 
