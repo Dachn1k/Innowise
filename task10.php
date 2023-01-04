@@ -32,7 +32,10 @@ class Calculator
 
     public function divide()
     {
-        $this->sum = $this->arg1 / $this->arg2;
+        if ($this->arg1 != 0 &&   $this->arg2 != 0) {
+            $this->sum = $this->arg1 / $this->arg2;
+        }
+        $this->sum = 0;
         return $this;
     }
 
@@ -52,7 +55,6 @@ class Calculator
     {
         if ($number != 0) {
             $this->sum /= $number;
-            return $this;
         }
         return $this;
     }
