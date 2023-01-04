@@ -7,9 +7,7 @@ function foo(int $input): int
         $process[]= $input;
 
     }
-    print_r($process);
     return $input;
 }
 
 echo foo(5786940);
-?>
