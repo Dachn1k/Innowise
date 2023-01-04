@@ -29,10 +29,10 @@ function foo2(int $number):string
         case $number > 30:
             $responseText = "More than 30";
             break;
-        case $number > 20 && $number <= 30:
+        case $number > 20:
             $responseText = "More than 20";
             break;
-        case $number > 10 && $number <= 20:
+        case $number > 10:
             $responseText = "More than 10";
             break;
         default:
@@ -51,10 +51,8 @@ function foo3(int $number) :string
         : ($number > 20
             ? 'More than 20'
             : ($number > 10
-                ? 'More than 10'
-                : ($number <= 10
-                    ? 'Equal or less than 10'
-                    : "")));
+                ? 'More than 10' 
+                : 'Equal or less than 10'));
 
 
 }
