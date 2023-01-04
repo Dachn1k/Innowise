@@ -13,13 +13,9 @@ class Student
 
     public function getScholarship(): string
     {
-        $amount = '';
-        if ($this->averageMark == 5) {
-            $amount = '100 USD';
-        } else {
-            $amount = '80 USD';
-        }
-        return $amount;
+        return $this->averageMark == 5
+            ? '100 USD'
+            : '80 USD';
     }
 }
 
@@ -27,12 +23,9 @@ class Aspirant extends Student
 {
     public function getScholarship(): string
     {
-        if ($this->averageMark == 5) {
-            $amount = '200 USD';
-        } else {
-            $amount = '180 USD';
-        }
-        return $amount;
+        return $this->averageMark == 5
+            ? '200 USD'
+            : '180 USD';
     }
 }
 
@@ -50,9 +43,9 @@ $aspirants = [
 ];
 
 foreach ($students as $student) {
-    $student->getScholarship();
+   echo $student->getScholarship();
 }
 
 foreach ($aspirants as $aspirant) {
-    $aspirant->getScholarship();
+    echo $aspirant->getScholarship();
 }
