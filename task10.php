@@ -64,7 +64,12 @@ class Calculator
         $this->sum *= $number;
         return $this;
     }
+
+    public function __toString()
+    {
+        return $this->sum;
+    }
 }
 
 $calc = new Calculator(5, 9);
-echo $calc->add()->divideBy(2)->multiplyBy(3)->sum;
+echo $calc->add()->divideBy(2)->multiplyBy(3);
